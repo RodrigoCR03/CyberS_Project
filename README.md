@@ -1,4 +1,4 @@
-# CyberS_Project# CyberNova
+# CyberS_Project
 
 ## Visão Geral
 
