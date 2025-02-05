@@ -1,0 +1,43 @@
+version: '3'
+services:
+  gateway:
+    build: ./gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ai_ml
+      - threat_intelligence
+      - zero_trust
+      - soar
+      - grc
+      - training
+
+  ai_ml:
+    build: ./ai_ml
+    ports:
+      - "8001:8001"
+
+  threat_intelligence:
+    build: ./threat_intelligence
+    ports:
+      - "8002:8002"
+
+  zero_trust:
+    build: ./zero_trust
+    ports:
+      - "8003:8003"
+
+  soar:
+    build: ./soar
+    ports:
+      - "8004:8004"
+
+  grc:
+    build: ./grc
+    ports:
+      - "8005:8005"
+
+  training:
+    build: ./training
+    ports:
+      - "8006:8006"
